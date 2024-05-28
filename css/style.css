@@ -1,0 +1,102 @@
+:root {
+    --Bright_orange: hsl(31, 77%, 52%);
+    --Dark_cyan: hsl(184, 100%, 22%);
+    --Very_dark_cyan: hsl(179, 100%, 13%);
+    --Transparent_white: hsla(0, 0%, 100%, 0.75);
+    --Very_light_gray: hsl(0, 0%, 95%);
+
+    --lexend: "Lexend Deca", sans-serif;
+    --big: "Big Shoulders Display", sans-serif;
+}
+
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    background-color: var(--Very-dark-blue1);
+    min-height: 95vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h2 {
+    color: var(--Very_light_gray);
+    font-family: var(--big);
+    text-transform: uppercase;
+    font-size: 35px;
+    margin: 0;
+    margin-left: 45px;
+}
+p {
+    color: var(--Transparent_white);
+    font-size: 15px;
+    font-family: var(--lexend);
+    width: 70%;
+    text-align: start;
+    margin: 0;
+    margin-left: 45px;
+    line-height: 1.6;
+}
+.container {
+    width: 90%;
+    max-width: 300px;
+    display: grid;
+    border-radius: 8px;
+    height: 1200px;
+    overflow: hidden;
+    @media (min-width: 768px) {
+        height: 500px;
+        max-width: 900px;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+.sedan, .suvs, .luxury{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: start;
+}
+.img {
+    width: 70px;
+    margin-bottom: -50px;
+    margin-left: 45px;
+}
+.sedan {
+    background-color: var(--Bright_orange);
+
+    .btn {
+        color: var(--Bright_orange);
+    }
+}
+.suvs {
+    background-color: var(--Dark_cyan);
+    .btn {
+        color: var(--Dark_cyan);
+    }
+}
+.luxury {
+    background-color: var(--Very_dark_cyan);
+    .btn {
+        color: var(--Very_dark_cyan);
+    }
+}
+.btn {
+    background-color: var(--Very_light_gray);
+    border-radius: 20px;
+    padding: 10px;
+    margin: 0;
+    margin-left: 45px;
+    cursor: pointer;
+    border: none;
+    width: 100px;
+    font-weight: 700;
+}
+
+.btn:hover {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+}
